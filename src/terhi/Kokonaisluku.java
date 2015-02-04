@@ -2,30 +2,113 @@ package terhi;
 /**
  * 
  * @author Terhi Järvenpää
- * KESKEN!
+ * 
  */
 
 public class Kokonaisluku {
+    private int arvo;
+    
+    
     /**
-     * Luo luokka,jolla on yksi metodi. Metodi osaa tulostaa kaikki kokonaisluvut 0 - 1000,
-     * joiden neliöjuuri on kokonaisluku
-     * @param args none
+     * Konstruktori
+     * 
      */
+    public Kokonaisluku(){
+       arvo = 0;
+    }
+    
+    /**
+     * Konstruktori
+     * @param i
+     */
+    public Kokonaisluku(int i){
+       arvo = i;
+    }
 
- 
-     
-   public static void NeliojuuriKokonaisluku(){
-        for (int i=1; i <= 1000; i++) {
-            double y;
-          
-           y =  Math.sqrt(i);
-          
-           System.out.println(y);
-        }
-        }
+    
+    /**
+     * palauttaa arvon
+     * @return arvo
+     */
+    public int getArvo() {
+        return arvo;
+    }
 
-   public static void main(String[] args) {
-       NeliojuuriKokonaisluku();
-   }
+    /**
+     * lisää i:n arvoon
+     * @param i
+     */
+    public void lisaa(int i){
+        arvo = arvo + i;
+    }
+    
+    /**
+     * vähentää i:n arvoon
+     * @param i
+     */
+    public void vahenna(int i){
+        arvo = arvo - i;
+    }
+    
+    /**
+     * kertoo arvon i:llä
+     * @param i
+     */
+    public void kerro(int i){
+        arvo = arvo * i;
+    }
+    
+    /**
+     * jakaa arvon i:llä
+     * @param i
+     */
+    public void jaa(int i){
+        arvo = arvo / i;
+    }
+    
+    
+    
+    
+    
+    
+    
+    /**
+     * tulostaa l:n arvon
+     * @param l
+     */
+    
+    public void tulosta(Kokonaisluku l){
+        System.out.println(l.getArvo());
+    }
+    
+    
+    
+
+    /** main testausta varten 
+     * @param args
+     * 
+     */
+ /*  public static void main(String[] args) {
+      Kokonaisluku luku1 = new Kokonaisluku(1);
+      //tulostaa arvon
+      luku1.tulosta(luku1);
+      //lisää arvoa 
+      luku1.lisaa(2);
+    //tulostaa arvon
+      luku1.tulosta(luku1);
+      //vähentää arvoa
+      luku1.vahenna(2);
+      //tulostaa arvon
+      luku1.tulosta(luku1);
+      //kertolasku
+      luku1.kerro(5);
+      //tulostaa arvon
+      luku1.tulosta(luku1);
+      //jakolasku
+      luku1.jaa(5);
+    //tulostaa arvon
+      luku1.tulosta(luku1);
+      
+   } */
 
 }
